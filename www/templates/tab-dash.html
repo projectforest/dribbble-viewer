@@ -3,18 +3,18 @@
     <h2>Dribbble Viewer</h2>
     <div class="list card" data-ng-repeat="image in imageList">
       <div class="item item-avatar">
-        <img ng-src="{{image.player.avatar_url}}">
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
+        <img ng-src="{{image.user.avatar_url}}">
+        <h3>{{image.user.username}}</h3>
+        <p>{{image.user.location}}</p>
       </div>
 
       <div class="item item-image">
         <img ng-src="{{image.images.hidpi}}">
       </div>
 
-      <a class="item item-icon-left assertive" href="#">
+      <a class="item item-icon-left assertive" target="_blank"data-ng-href="{{image.html_url}}">
         <i class="icon ion-music-note"></i>
-        Start listening
+        Visit Original Image
       </a>
 
     </div>
